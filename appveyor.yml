@@ -71,7 +71,8 @@ build_script:
 test_script:
     - ps: Invoke-Build -Task Test
 
-before_deploy:
+after_test:
+# before_deploy:
     - ps: Invoke-Build -Task Deploy
 
 deploy:
